@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app>
+<head>
+<title>Hello AngularJS</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script src="hello.js"></script>
+</head>
+
+<body>
+	<div ng-controller="Hello">
+		<p>The username is {{user.id}}</p>
+		<p>The users address is:</p>
+		<ul>
+			<li ng-repeat="x in user.addresses">
+				<p>Address Line 1: {{x.addressLine1}}</p>
+				<p>Address Line 2: {{x.addressLine2}}</p>
+				<p>Town: {{x.town}}</p>
+				<p>County: {{x.county}}</p>
+				<p>Post Code: {{x.postCode}}</p>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

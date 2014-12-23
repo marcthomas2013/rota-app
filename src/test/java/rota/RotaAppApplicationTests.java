@@ -1,4 +1,4 @@
-package rota-app;
+package rota;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
