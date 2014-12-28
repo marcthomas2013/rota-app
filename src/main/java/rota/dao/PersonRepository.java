@@ -17,4 +17,8 @@ import rota.entities.Person;
 public interface PersonRepository extends PagingAndSortingRepository<Person, Long> {
 
     List<Person> findByLastName(@Param(value = "name") String lastName);
+    
+    List<Person> findByFirstName(@Param(value = "name") String firstName);
+    
+    List<Person> findByFirstNameLike(@Param(value = "name") String firstName);
 }
