@@ -22,17 +22,6 @@ import rota.services.PeopleService;
 public class RotaAppApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(RotaAppApplication.class, args);
-        PersonRepository repository = context.getBean(PersonRepository.class);
-
-        // save a couple of customers
-        repository.save(new Person("Mr", "Jack", "Bauer", "jack.bauer@ctu.gov"));
-        repository.save(new Person("Miss", "Chloe", "O'Brian", "chloe.obrian@ctu.gov"));
-        
-        List<Person> findByFirstName = repository.findByFirstName("Jac");
-        System.out.println(findByFirstName.size());
-        
-        findByFirstName = repository.findByFirstNameLike("Jac");
-        System.out.println(findByFirstName.size());
     }
     
 	@Bean
